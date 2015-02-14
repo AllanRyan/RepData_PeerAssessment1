@@ -206,21 +206,10 @@ hr {
 <pre><code class="r">library(knitr)
 library(timeDate)
 library(xlsx)
-</code></pre>
-
-<pre><code>## Loading required package: rJava
-## Loading required package: xlsxjars
-</code></pre>
-
-<pre><code class="r">library(XML)
+library(XML)
 library(data.table)
-</code></pre>
 
-<pre><code>## data.table 1.9.4  For help type: ?data.table
-## *** NB: by=.EACHI is now explicit. See README to restore previous behaviour.
-</code></pre>
-
-<pre><code class="r">setwd(&quot;c:/HW/ReproResearch/data&quot;)
+setwd(&quot;c:/HW/ReproResearch/data&quot;)
 stepdata &lt;- read.table(&quot;activity.csv&quot;, sep=&quot;,&quot;,header=TRUE)
 head(stepdata)
 </code></pre>
@@ -302,15 +291,15 @@ StepMaxInt
 
 <pre><code class="r">### missing values
 totalObs &lt;- length(StepTrans$steps) 
-## Number of observations missing in steps
-sum(is.na(StepTrans$steps))
+## Number of observations missing in dataset
+colSums(is.na(StepTrans))
 </code></pre>
 
-<pre><code>## [1] 2304
+<pre><code>##    steps     date interval 
+##     2304        0        0
 </code></pre>
 
-<pre><code class="r">## similar calculations reveal no missing values in the &quot;date&quot; and &quot;interval&quot; columns
-AvgStepsInt &lt;- mean(compcases$steps)
+<pre><code class="r">AvgStepsInt &lt;- mean(compcases$steps)
 head(AvgStepsInt)
 </code></pre>
 

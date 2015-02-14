@@ -60,9 +60,9 @@ Imputing missing values
 ```{r}
 ### missing values
 totalObs <- length(StepTrans$steps) 
-## Number of observations missing in steps
-sum(is.na(StepTrans$steps))
-## similar calculations reveal no missing values in the "date" and "interval" columns
+## Number of observations missing in dataset
+colSums(is.na(StepTrans))
+
 AvgStepsInt <- mean(compcases$steps)
 head(AvgStepsInt)
 ```

@@ -12,24 +12,9 @@ output:
 library(knitr)
 library(timeDate)
 library(xlsx)
-```
-
-```
-## Loading required package: rJava
-## Loading required package: xlsxjars
-```
-
-```r
 library(XML)
 library(data.table)
-```
 
-```
-## data.table 1.9.4  For help type: ?data.table
-## *** NB: by=.EACHI is now explicit. See README to restore previous behaviour.
-```
-
-```r
 setwd("c:/HW/ReproResearch/data")
 stepdata <- read.table("activity.csv", sep=",",header=TRUE)
 head(stepdata)
@@ -135,16 +120,16 @@ Imputing missing values
 ```r
 ### missing values
 totalObs <- length(StepTrans$steps) 
-## Number of observations missing in steps
-sum(is.na(StepTrans$steps))
+## Number of observations missing in dataset
+colSums(is.na(StepTrans))
 ```
 
 ```
-## [1] 2304
+##    steps     date interval 
+##     2304        0        0
 ```
 
 ```r
-## similar calculations reveal no missing values in the "date" and "interval" columns
 AvgStepsInt <- mean(compcases$steps)
 head(AvgStepsInt)
 ```
