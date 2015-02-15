@@ -54,12 +54,6 @@ hist(steps.day$steps)
 ###Calculate the mean and median steps per day
 
 ```r
-hist(steps.day$steps)
-```
-
-![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png) 
-
-```r
 mean(steps.day$steps)
 ```
 
@@ -192,4 +186,4 @@ plot(steps ~  interval, WD.Aggregate, type = "l", main="Weekdays")
 ```r
 par(opt)
 ```
-These plots clearly illustrate the different patterns of activity. During the week individuals get up earlier, have a burst of activity then there are peaks at lunch, late afternoon and early evening. On weekends people get up earlier but show more sustained activity through the day. 
+These plots clearly illustrate the different patterns of activity. During the week individuals get up earlier, have a burst of activity then there are peaks at lunch, late afternoon and early evening. On weekends people get up later but show more sustained activity through the day. 
